@@ -28,6 +28,7 @@
 .headerStyle {
     display: flex;
     flex-direction:column;
+    background-image: linear-gradient(rgb(229, 245, 250), rgb(255,255,255));
 }
 
 .marginAuto {
