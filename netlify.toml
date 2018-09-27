@@ -1,3 +1,7 @@
 SPACE = "test"
 TOKEN = "test"
 NODE_ENV = "netlify"
+[context.production]
+  publish = "build/"
+  command = "make publish"
+  environment = { ACCESS_TOKEN = "super secret" }
