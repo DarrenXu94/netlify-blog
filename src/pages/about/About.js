@@ -10,22 +10,23 @@ var client = contentful.createClient(contentlyConfig)
 
 class About extends Component {
     state = {
-        about: {}
+        about: {},
+        metadata: {}
     }
     componentWillMount(){
         client.getEntries(params).then(entries => {
             entries.items.forEach(entry => {
               if (entry.fields) {
-                this.setState({about: entry.fields})
+                this.setState({about: entry.fields, metadata: entry.sys})
               }
             })
           })
     }
     render() {
-        const {about} = this.state
+        const {about, metadata} = this.state
         return (
             <div className="fixed container" >
-                {about && <AboutComponent props={about}/>}
+                {about && <AboutComponent props={about} metadata={metadata}/>}
             </div>
         );
     }
