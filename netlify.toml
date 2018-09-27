@@ -3,5 +3,5 @@ TOKEN = "test"
 NODE_ENV = "netlify"
 [context.production]
   publish = "build/"
-  command = "make publish"
+  command = "yan build"
   environment = { ACCESS_TOKEN = "super secret" }
