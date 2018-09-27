@@ -1,4 +1,4 @@
-console.log(process.env)
+console.log(process)
 const contentlyConfig = {
     space: 'space',
     accessToken: 'token'
