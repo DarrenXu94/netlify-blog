@@ -11,7 +11,7 @@ const Heading = () => {
             <div className="marginAuto padTop oleoFont"><h1>A blog by Darren</h1></div>
             <div className="marginAuto iconRowContainer" >
                 <div className="iconRow gothicFont">
-                    {pages.map(page=><div key={page}><a href=''>{page}</a></div>)}
+                    {pages.map(page=><div key={page}><a href={`/${page}`}>{page}</a></div>)}
                 </div>
             </div>
 

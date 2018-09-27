@@ -3,6 +3,7 @@ import * as contentful from 'contentful'
 import './css/custom-css-bootstrap-magic.css'
 import { Grid } from 'react-bootstrap';
 import Heading from './components/heading'
+import Content from './components/content'
 
 import contentlyConfig from './config/contently'
 
@@ -24,8 +25,7 @@ class App extends Component {
 
         </div>
         <Grid>
-
-        More stuff
+          <Content />
         </Grid>
       </div>
     );
