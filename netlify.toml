@@ -4,4 +4,6 @@ NODE_ENV = "netlify"
 [context.production]
   publish = "build/"
   command = "yarn build"
-  environment = { SPACE = "super secret", TOKEN = "token" }
+[context.production.environment]  
+  SPACE = "super secret"
+  TOKEN = "token" 
