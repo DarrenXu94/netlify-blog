@@ -1,9 +1,0 @@
-SPACE = "test"
-TOKEN = "test"
-NODE_ENV = "netlify"
-[context.production]
-  publish = "build/"
-  command = "yarn build"
-[context.production.environment]  
-  SPACE = "super secret"
-  TOKEN = "token" 
