@@ -7,6 +7,7 @@ import Content from './components/content'
 
 import contentlyConfig from './config/contently'
 
+
 var client = contentful.createClient(contentlyConfig)
 client.getEntries().then(entries => {
   entries.items.forEach(entry => {
@@ -22,7 +23,6 @@ class App extends Component {
         <div >
           <Heading />
           <hr />
-
         </div>
         <Grid>
           <Content />
