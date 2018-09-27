@@ -1,0 +1,39 @@
+.cropcircle{
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    background: #eee no-repeat center;
+    background-size: cover;
+    border:5px solid rgb(0, 0, 0);
+}
+
+#heading{
+    background-image: url('../../img/placeholder.jpg');
+}
+.iconRowContainer {
+    width:40%;
+    min-width: 300px;
+}
+.iconRow {
+    padding-top: 20px;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.iconRow a{
+    text-decoration: none;
+}
+
+.headerStyle {
+    display: flex;
+    flex-direction:column;
+}
+
+.marginAuto {
+    margin: auto;
+}
+
+.padTop {
+    padding-top: 15px;
+}

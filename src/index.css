@@ -2,4 +2,16 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  height: 100%;
+  width: 100%;
+}
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
+@import url('https://fonts.googleapis.com/css?family=Oleo+Script');
+
+.gothicFont {
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+.oleoFont {
+  font-family: 'Oleo Script', cursive;
 }
