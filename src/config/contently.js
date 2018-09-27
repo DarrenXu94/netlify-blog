@@ -1,5 +1,6 @@
+console.log(process.env)
 const contentlyConfig = {
-    space: process.env.SPACE,
-    accessToken: process.env.TOKEN
+    space: 'space',
+    accessToken: 'token'
 }
 export default contentlyConfig

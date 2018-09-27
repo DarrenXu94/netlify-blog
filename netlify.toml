@@ -1,0 +1,3 @@
+SPACE = "test"
+TOKEN = "test"
+NODE_ENV = "netlify"
