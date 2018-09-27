@@ -1,11 +1,10 @@
 import React from 'react';
 import './heading.css'
 import pages from '../../pages'
-import { Button } from 'react-bootstrap';
 
 const Heading = () => {
     return (
-        <div className="headerStyle" >
+        <div className="headerStyle padTop" >
             <div className="marginAuto">
                 <div id="heading" className="cropcircle"></div>
             </div>
@@ -15,6 +14,7 @@ const Heading = () => {
                     {pages.map(page=><div key={page}><a href=''>{page}</a></div>)}
                 </div>
             </div>
+
         </div>
     );
 };

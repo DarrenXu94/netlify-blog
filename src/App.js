@@ -20,6 +20,7 @@ class App extends Component {
       <div >
         <div >
           <Heading />
+          <hr />
 
         </div>
         <Grid>
