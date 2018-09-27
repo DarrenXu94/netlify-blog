@@ -2,10 +2,10 @@ import React from 'react';
 
 const Personal = () => {
     return (
-        <div>
+        <div className="fixed">
             Personal
         </div>
     );
 };
 
-export default Personal;Personal
+export default Personal;

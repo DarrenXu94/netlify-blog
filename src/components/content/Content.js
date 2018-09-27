@@ -9,23 +9,24 @@ import Contact from '../../pages/contact'
 import './content.css'
 
 const Content = () => {
-    return (            
+    return (
         <Route
             render={({ location }) => (
-                <TransitionGroup>
-                    <CSSTransition key={location.key} classNames="fadeTranslate" timeout={300}>
-                        <Switch location={location}>
-                            <Route exact path='/Personal' component={Personal} />
-                            <Route exact path='/About' component={About} />
-                            <Route exact path='/Contact' component={Contact} />
-                            <Route exact path='/Programming' component={Programming} />
-                            <Route component={Programming} />
-                        </Switch>
-                    </CSSTransition>
+                <div className="fixed">
+                    <TransitionGroup>
+                        <CSSTransition key={location.key} classNames="fadeTranslate" timeout={300}>
+                            <Switch location={location}>
+                                <Route exact path='/Personal' component={Personal} />
+                                <Route exact path='/About' component={About} />
+                                <Route exact path='/Contact' component={Contact} />
+                                <Route exact path='/Programming' component={Programming} />
+                                <Route component={Programming} />
+                            </Switch>
+                        </CSSTransition>
                     </TransitionGroup>
-
+                </div>
             )}
-            />
+        />
     );
 };
 

@@ -5,6 +5,7 @@
     background: #eee no-repeat center;
     background-size: cover;
     border:5px solid #3f464d;
+    cursor: pointer;
 }
 
 #heading{
@@ -38,3 +39,9 @@
 .padTop {
     padding-top: 15px;
 }
+
+.linkStyle {
+    cursor: pointer;
+    padding: 10px;
+}
+

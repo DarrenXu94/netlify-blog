@@ -15,3 +15,7 @@ body {
 .oleoFont {
   font-family: 'Oleo Script', cursive;
 }
+
+.fixed{
+  position: fixed;
+}

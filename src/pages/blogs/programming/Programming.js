@@ -12,7 +12,7 @@ class Programming extends Component {
     render() {
         const {blogs} = this.state
         return (
-            <div>
+            <div className="fixed container" >
                 {blogs.map(blog=><Blog key={blog.path} blog={blog}/>)}
             </div>
         );

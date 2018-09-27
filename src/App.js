@@ -7,9 +7,12 @@ import Content from './components/content'
 
 import contentlyConfig from './config/contently'
 
+// const params = {content_type:"blog"}
+const params = {content_type:"about"}
+
 
 var client = contentful.createClient(contentlyConfig)
-client.getEntries().then(entries => {
+client.getEntries(params).then(entries => {
   entries.items.forEach(entry => {
     if (entry.fields) {
       console.log(entry.fields)
