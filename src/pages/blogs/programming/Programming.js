@@ -15,7 +15,7 @@ class Programming extends Component {
     render() {
         const { blogs } = this.state
         return (
-            <div className="fixed container" >
+            <div className="container" >
                 {blogs.map(blog => <Blog key={blog.fields.path} blog={blog} />)}
             </div>
         );

@@ -12,7 +12,7 @@ const Content = () => {
     return (
         <Route
             render={({ location }) => (
-                <div className="fixed">
+                <div className="flex justifyCenter minHeight400">
                     <TransitionGroup>
                         <CSSTransition key={location.key} classNames="fadeTranslate" timeout={300}>
                             <Switch location={location}>

@@ -3,7 +3,7 @@ import { Button } from 'react-bootstrap';
 
 const Contact = () => {
     return (
-        <div className="fixed textCenter container">
+        <div>
             <h3>Catch me on the following platforms</h3>
 
             <Button className="margin5" bsStyle="primary" bsSize="large">Github</Button>

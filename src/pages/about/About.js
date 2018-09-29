@@ -19,7 +19,7 @@ class About extends Component {
     render() {
         const {about, metadata} = this.state
         return (
-            <div className="fixed container" >
+            <div className="container" >
                 {about && <AboutComponent props={about} metadata={metadata}/>}
             </div>
         );
