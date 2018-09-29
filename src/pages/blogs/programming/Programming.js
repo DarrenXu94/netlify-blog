@@ -1,22 +1,25 @@
 import React, { Component } from 'react';
 import Blog from '../../../components/blog'
+import { withContentful } from '../../../contexts/ContentfulContext'
 
 class Programming extends Component {
     state = {
         blogs: []
     }
-    componentWillMount() {
-        const sampleBlog = { title: "First post", path: "/my-first-blog-post", content: "This is my first post" }
-        this.setState({ blogs: [sampleBlog] })
+    async componentDidMount(){
+        const blogs = await this.props.contentful.getEntriesByType("blog")
+        console.log(blogs)
+        this.setState({blogs})
+
     }
     render() {
         const { blogs } = this.state
         return (
             <div className="fixed container" >
-                {blogs.map(blog => <Blog key={blog.path} blog={blog} />)}
+                {blogs.map(blog => <Blog key={blog.fields.path} blog={blog} />)}
             </div>
         );
     }
 }
 
-export default Programming;
+export default withContentful(Programming);
