@@ -16,6 +16,14 @@ body {
   font-family: 'Oleo Script', cursive;
 }
 
-.fixed{
+.fixed {
   position: fixed;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.margin5 {
+  margin: 5px;
 }

@@ -11,7 +11,7 @@ class Heading extends Component {
             <div className="marginAuto">
                 <div onClick={()=>this.props.history.push(`/`)} id="heading" className="cropcircle"></div>
             </div>
-            <div className="marginAuto padTop oleoFont"><h1>A blog by Darren</h1></div>
+            <div className="marginAuto padTop oleoFont"><h1>~ A blog by Darren ~</h1></div>
             <div className="marginAuto iconRowContainer" >
                 <div className="iconRow gothicFont">
                     {pages.map(page => 
