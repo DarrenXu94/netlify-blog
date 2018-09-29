@@ -3,6 +3,7 @@ import './css/custom-css-bootstrap-magic.css'
 import { Grid } from 'react-bootstrap';
 import Heading from './components/heading'
 import Content from './components/content'
+import Footer from './components/footer'
 
 class App extends Component {
   render() {
@@ -15,6 +16,8 @@ class App extends Component {
         <Grid>
           <Content />
         </Grid>
+        <Footer />
+
       </div>
     );
   }

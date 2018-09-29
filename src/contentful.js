@@ -7,7 +7,7 @@ export default class Contentful{
     }
 
     getEntriesByType = async (type) => {
-        const entries = await this.client.getEntries({content_type:type})
+        const entries = await this.client.getEntries({content_type:type, order: '-sys.createdAt'})
         return entries.items
     }
 }

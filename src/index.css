@@ -4,6 +4,8 @@ body {
   font-family: sans-serif;
   height: 100%;
   width: 100%;
+  overflow-x: hidden;
+
 }
 @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
 @import url('https://fonts.googleapis.com/css?family=Oleo+Script');
@@ -17,7 +19,8 @@ body {
 }
 
 .fixed {
-  position: fixed;
+  position: absolute;
+  width: 100%;
 }
 
 .textCenter {
@@ -26,4 +29,12 @@ body {
 
 .margin5 {
   margin: 5px;
+}
+
+.margin10 {
+  margin: 10px;
+}
+
+.boxShadow {
+  box-shadow: 5px 10px 18px #888888;
 }
