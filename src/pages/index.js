@@ -1,6 +1,5 @@
 const pages = [
     'programming',
-    'personal',
     'about',
     'contact'
 ]
