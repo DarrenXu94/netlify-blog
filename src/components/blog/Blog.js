@@ -7,12 +7,12 @@ const Blog = ({ blog }) => {
     return (
         <div className="card card-body margin10 boxShadow">
             <h1 className="gothicFont card-title">
-                {blog.fields.title}
+                {blog.title}
             </h1>
             <br />
 
             <sup>Updated at <Moment date={new Date(blog.sys.updatedAt)} format="YYYY/MM/DD" /></sup>
-            <Markdown className="card-text padTop cardMaxWidth" source={blog.fields.content} />
+            <Markdown className="card-text padTop cardMaxWidth" source={blog.content} />
 
         </div>
     );
