@@ -58,7 +58,7 @@ class Item {
         if ('excerpt_separator' in headers) {
             let separator = headers.excerpt_separator
             let splitContent = this.content.split(separator)
-            this.snippet = splitContent[0]
+            this.snippet = splitContent[0].trim()
             this.content = splitContent[1].trim()
         }
     }

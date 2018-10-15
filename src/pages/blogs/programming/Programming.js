@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Blog from '../../../components/blog'
+import BlogPreview from '../../../components/blogPreview'
 import { withContentful } from '../../../contexts/ContentfulContext'
 import { Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -19,7 +19,7 @@ class Programming extends Component {
         const { blogs } = this.state
         return (
             <div className="container" >
-                {blogs.map(blog => <Blog key={blog.path} blog={blog} />)}
+                {blogs.map(blog => <BlogPreview key={blog.path} blog={blog} />)}
                 <div style={{textAlign: 'center', padding: '4% 20% 0 20%'}}>
                     <Button style={{margin: '5px'}} disabled={true}>
                         <FontAwesomeIcon icon={faChevronLeft}/>
