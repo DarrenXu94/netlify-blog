@@ -20,6 +20,14 @@ export default class Contentful{
         return entryItems
         // return entries.items
     }
+
+    getBlogById = async (id) => {
+        const entry = await this.client.getEntry(id)
+        let entryItem = new Item(entry)
+        // console.log(entryItem)
+        return entryItem
+
+    }
 }
 
 class Item {
@@ -59,7 +67,7 @@ class Item {
             let separator = headers.excerpt_separator
             let splitContent = this.content.split(separator)
             this.snippet = splitContent[0].trim()
-            this.content = splitContent[1].trim()
+            this.content = splitContent.join('\n')
         }
     }
 }

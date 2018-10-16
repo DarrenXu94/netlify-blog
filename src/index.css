@@ -10,6 +10,10 @@ body {
 @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
 @import url('https://fonts.googleapis.com/css?family=Oleo+Script');
 
+a {
+  cursor: pointer;
+}
+
 .gothicFont {
   font-family: 'Nanum Gothic', sans-serif;
 }
