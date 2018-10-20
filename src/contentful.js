@@ -14,6 +14,8 @@ export default class Contentful{
             skip: start
         })
         console.log(entries)
+        this.totalProgrammingPosts = entries.total
+
         // const newItem = new Item(entries.items[0])
         let entryItems = entries.items.map(item => new Item(item))
         // console.log(entryItems)

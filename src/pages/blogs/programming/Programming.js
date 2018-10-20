@@ -19,7 +19,10 @@ class Programming extends Component {
         return (
             <div className="container" >
                 {blogs.map(blog => <BlogPreview key={blog.path} blog={blog} />)}
-                <PaginationButton />
+                <PaginationButton 
+                    currentPage={this.state.start} 
+                    pageCount={this.props.contentful.totalProgrammingPosts} 
+                />
             </div>
         );
     }
