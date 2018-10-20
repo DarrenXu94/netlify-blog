@@ -12,7 +12,7 @@ class About extends Component {
 
     async componentDidMount(){
         const entry = (await this.props.contentful.getEntriesByType("about"))[0]
-        this.setState({about: entry.fields, metadata: entry.sys})
+        this.setState({about: entry, metadata: entry.sys})
 
     }
 

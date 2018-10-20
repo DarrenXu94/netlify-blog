@@ -35,16 +35,21 @@ export default class Contentful{
 
 class Item {
     constructor(rawItem){
-        const rawItemObj = this.extractHeader(rawItem.fields.content)
+        if ('content' in rawItem.fields) {
+            const rawItemObj = this.extractHeader(rawItem.fields.content)
+            this.headers = rawItemObj.header;
+            this.content = rawItemObj.content;
+            if (this.headers !== null) {
+                this.processHeaders()
+            }
+        } else {
+            this.description = rawItem.fields.description;
+        }
         this.sys = rawItem.sys;
         this.title = rawItem.fields.title;
         this.path = rawItem.fields.path;
-        this.headers = rawItemObj.header;
-        this.content = rawItemObj.content;
         this.snippet;
-        if (this.headers !== null) {
-            this.processHeaders()
-        }
+        
     }
 
     /**
