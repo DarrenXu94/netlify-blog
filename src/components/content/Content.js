@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch, Redirect } from 'react-router-dom'
 
 import Programming from '../../pages/blogs/programming'
 import About from '../../pages/about'
@@ -13,9 +13,11 @@ const Content = () => {
                 <Route exact path='/About' component={About} />
                 <Route exact path='/Contact' component={Contact} />
                 <Route exact path='/Programming' component={Programming} />
+                <Route exact path='/programming/page/:start' component={Programming} />
+
                 <Route exact path='/Blog/:id' component={Blog} />
 
-                <Route component={Programming} />
+                <Redirect to="/Programming"/>
             </Switch>
         </div>
     );
