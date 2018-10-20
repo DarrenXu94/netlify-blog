@@ -14,7 +14,6 @@ export default class Contentful{
             limit: POSTS_PER_PAGE,
             skip: start
         })
-        console.log(entries)
         this.totalProgrammingPosts = entries.total
 
         // const newItem = new Item(entries.items[0])
