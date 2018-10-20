@@ -8,10 +8,21 @@ class Programming extends Component {
         blogs: [],
         start: this.props.match.params.start || 0
     }
-    async componentDidMount(){
-        const blogs = await this.props.contentful.getEntriesByType("blog", this.state.start)
-        console.log(blogs)
+    updatePage = async (start = 0) => {
+        const blogs = await this.props.contentful.getEntriesByType("blog", start)
+        // console.log(blogs)
         this.setState({blogs})
+    }
+
+    componentWillUpdate(nextProps) {
+        if (nextProps.match.params.start !== this.props.match.params.start) {
+            this.updatePage(nextProps.match.params.start)
+            this.setState({start:nextProps.match.params.start })
+        }
+    }
+
+    componentDidMount(){
+        this.updatePage(this.props.match.params.start)
 
     }
     render() {
@@ -19,6 +30,7 @@ class Programming extends Component {
         return (
             <div className="container" >
                 {blogs.map(blog => <BlogPreview key={blog.path} blog={blog} />)}
+                {this.state.start}
                 <PaginationButton 
                     currentPage={this.state.start} 
                     pageCount={this.props.contentful.totalProgrammingPosts} 

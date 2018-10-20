@@ -1,5 +1,6 @@
 import * as contentful from 'contentful'
 import contentlyConfig from './config/contently'
+import {POSTS_PER_PAGE} from './config/blogConfig'
 
 export default class Contentful{
     constructor(){
@@ -10,7 +11,7 @@ export default class Contentful{
         const entries = await this.client.getEntries({
             content_type:type, 
             order: '-sys.createdAt',
-            limit: 5,
+            limit: POSTS_PER_PAGE,
             skip: start
         })
         console.log(entries)

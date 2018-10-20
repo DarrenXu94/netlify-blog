@@ -19,11 +19,8 @@ class Blog extends Component {
             <div className="card card-body margin10 boxShadow">
             {blog && 
                 <div>
-                    <h1 className="gothicFont card-title">
-                        {blog.title}
-                    </h1>
+                    <h1 className="gothicFont card-title">{blog.title}</h1>
                     <br />
-
                     <sup>Updated at <Moment date={new Date(blog.sys.updatedAt)} format="YYYY/MM/DD" /></sup>
                     <Markdown className="card-text padTop cardMaxWidth" source={blog.content} />
                 </div>
