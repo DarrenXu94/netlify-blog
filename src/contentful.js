@@ -47,7 +47,7 @@ class Item {
         this.sys = rawItem.sys;
         this.title = rawItem.fields.title;
         this.path = rawItem.fields.path;
-        this.snippet;
+        // this.snippet;
         
     }
 
