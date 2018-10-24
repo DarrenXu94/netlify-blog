@@ -7,6 +7,13 @@ export default class Contentful{
         this.client = contentful.createClient(contentlyConfig)
     }
 
+    getSkills = async () => {
+        const entries = await this.client.getEntries({
+            content_type:"skill"
+        })
+        return entries.items
+    }
+
     getEntriesByType = async (type, start) => {
         const entries = await this.client.getEntries({
             content_type:type, 
