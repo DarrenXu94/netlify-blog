@@ -13,6 +13,7 @@
     "react": "^16.5.2",
     "react-bootstrap": "^0.32.4",
     "react-dom": "^16.5.2",
+    "react-flipcard": "^0.2.1",
     "react-markdown": "^3.6.0",
     "react-moment": "^0.8.1",
     "react-router-dom": "^4.3.1",
