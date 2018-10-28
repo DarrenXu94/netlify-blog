@@ -3,7 +3,7 @@ import AboutComponent from './components/AboutComponent'
 import SkillsComponent from './components/SkillsComponent'
 
 import { withContentful } from '../../contexts/ContentfulContext'
-
+import Contact from '../contact/Contact'
 
 class About extends Component {
     state = {
@@ -23,6 +23,7 @@ class About extends Component {
             <div className="container" >
                 {about && <AboutComponent props={about} metadata={metadata}/>}
                 <SkillsComponent />
+                <Contact spacing={`start`}/>
             </div>
         );
     }

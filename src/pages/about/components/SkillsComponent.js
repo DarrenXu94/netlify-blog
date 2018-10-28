@@ -16,7 +16,7 @@ class SkillsComponent extends Component {
     render() {
         let {skills} = this.state
         return (
-            <div>
+            <div style={{marginBottom: "30px"}}>
                 <h1 className="gothicFont" style={{marginBottom:"15px"}}>My Skills</h1>
 
                     <div style={{display:"flex"}}>

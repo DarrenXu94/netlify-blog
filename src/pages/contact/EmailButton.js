@@ -25,7 +25,6 @@ class EmailButton extends Component {
                     </CopyToClipboard>
                 }
                 
-
             </div>
         );
     }

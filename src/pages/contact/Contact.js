@@ -7,11 +7,11 @@ import EmailButton from './EmailButton'
 const GitHub = `https://github.com/DarrenXu94`
 const LinkedIn = `https://www.linkedin.com/in/darren-xu-profile/`
 
-const Contact = () => {
+const Contact = ({spacing = 'space-evenly'}) => {
     return (
         <div>
             <h3>Catch me on the following platforms</h3>
-            <div className="flex" style={{ justifyContent: 'space-evenly' }}>
+            <div className="flex" style={{ justifyContent: spacing }}>
                 <Button href={GitHub} className="margin5" bsStyle="primary" bsSize="large">
                     <FontAwesomeIcon icon={faGithub} />
                     <b className="margin10">Github</b>
